@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Footer from "@/components/Footer";
 
 const soehne = localFont({
   src: [
@@ -27,7 +26,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={soehne.variable}>
         {children} 
-        <Footer />
       </body>
     </html>
   );

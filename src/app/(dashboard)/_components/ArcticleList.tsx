@@ -82,7 +82,7 @@ const ArcticleList = ({ articles, prompt }: Props) => {
         {arcticles_list &&
           arcticles_list.map((article) => (
             <div key={article.id}>
-              <div className="relative w-[280px] h-[450px] overflow-hidden rounded-2xl">
+              <div className="relative sm:w-[280px] sm:h-[450px] overflow-hidden rounded-2xl">
                 <Image
                   src={article.image_url}
                   alt="image"

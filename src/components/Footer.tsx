@@ -41,6 +41,8 @@ const Footer = () => {
           </div>
         </div>
 
+        
+
         <div className="mt-20 flex justify-start">
           <h6 className="text-xs text-white">© Alkye Test</h6>
         </div>

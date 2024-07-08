@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { Loader2, Eye, EyeOff } from "lucide-react";
@@ -20,12 +20,12 @@ const PasswordForm = () => {
       username: "testadmin",
       password: "testadmin",
     });
-    // console.log(res.data);
-    if(res){
+    if (res) {
       router.push("/");
     }
     setLoading(false);
   };
+
   return (
     <>
       <div className="relative">
@@ -33,6 +33,9 @@ const PasswordForm = () => {
           type={isPasswordVisible ? "text" : "password"}
           placeholder="Password"
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mr-2 focus:outline-none"
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setPassword(e.target.value)
+          }
         />
         <button
           className="absolute inset-y-0 right-0 flex items-center px-4 text-gray-600"
