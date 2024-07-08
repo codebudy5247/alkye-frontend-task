@@ -13,7 +13,7 @@ const HomePage = async () => {
 
   //IF not get token,redirect user to login page
   if (!cookiesVal) {
-    redirect(`/password`);
+    redirect(`/email`);
   }
   // Get current login user
   let currentUser = JSON.parse(cookiesVal);
